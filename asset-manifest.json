@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/terabit-test/static/css/main.e6c13ad2.css",
+    "main.js": "/terabit-test/static/js/main.e093a45a.js",
+    "index.html": "/terabit-test/index.html",
+    "main.e6c13ad2.css.map": "/terabit-test/static/css/main.e6c13ad2.css.map",
+    "main.e093a45a.js.map": "/terabit-test/static/js/main.e093a45a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.e093a45a.js"
+  ]
+}
