@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/terabit-test/static/css/main.e6c13ad2.css",
-    "main.js": "/terabit-test/static/js/main.43bf6741.js",
+    "main.css": "/terabit-test/static/css/main.6407da47.css",
+    "main.js": "/terabit-test/static/js/main.00f544b3.js",
     "index.html": "/terabit-test/index.html",
-    "main.e6c13ad2.css.map": "/terabit-test/static/css/main.e6c13ad2.css.map",
-    "main.43bf6741.js.map": "/terabit-test/static/js/main.43bf6741.js.map"
+    "main.6407da47.css.map": "/terabit-test/static/css/main.6407da47.css.map",
+    "main.00f544b3.js.map": "/terabit-test/static/js/main.00f544b3.js.map"
   },
   "entrypoints": [
-    "static/css/main.e6c13ad2.css",
-    "static/js/main.43bf6741.js"
+    "static/css/main.6407da47.css",
+    "static/js/main.00f544b3.js"
   ]
 }
