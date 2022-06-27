@@ -5,17 +5,19 @@ const Input = (props) => {
   Input.propType = {
     inputFunc: PropTypes.func.isRequired,
     buttonFunc: PropTypes.func.isRequired,
+    value: PropTypes.number.isRequired,
   };
   return (
     <>
       <h3>Введите интервал в секундах:</h3>
+      <h4>Interval: {props.value} sec</h4>
       <form>
         <input
           type="text"
           placeholder="Введите интервал"
           onChange={props.inputFunc}
         />
-        <input type="button" value="Enter" onClick={props.buttonFunc} />
+        <button onClick={props.buttonFunc}>Enter</button>
       </form>
     </>
   );

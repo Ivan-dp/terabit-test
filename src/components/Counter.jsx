@@ -12,28 +12,19 @@ const Counter = (props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      if (toggle) {
-        setCount(count + 1);
-      } else {
-        setCount(0);
-        console.log(count);
-      }
+      toggle ? setCount(count + 1) : setCount(0);
     }, interval);
   }, [count, toggle]);
 
   useEffect(() => {
-    if (toggle) {
-      setBtnName("Остановить");
-    } else {
-      setBtnName("Запустить");
-    }
+    toggle ? setBtnName("Остановить") : setBtnName("Запустить");
   }, [toggle]);
 
   console.log(count);
 
   return (
     <div className="counter">
-      <h2>{count}</h2>
+      <h2>#{count}: текущий_счётчик</h2>
       <button onClick={() => setToggle(!toggle)}>{btnName}</button>
     </div>
   );

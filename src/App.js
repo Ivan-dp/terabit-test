@@ -16,7 +16,9 @@ function App() {
         buttonFunc={(event) => {
           event.preventDefault();
           setTimer(value);
+          console.log("Interval: " + value + " sec");
         }}
+        value={value}
       />
       <Counter interval={timer * 1000} />
     </div>
