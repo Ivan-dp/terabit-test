@@ -1,14 +1,25 @@
-import React from "react";
+import React, { useState } from "react";
 import "./App.css";
-import { Counter } from "./components";
+import { Counter, Input } from "./components";
 import { interval } from "./consts";
-import { Input } from "./components";
 
 function App() {
+  const [value, setValue] = useState(1);
+  const [timer, setTimer] = useState(value);
+
   return (
     <div className="App">
-      <Input />
-      <Counter interval={interval} />
+      <Input
+        inputFunc={(event) => {
+          setValue(event.target.value);
+          event.preventDefault();
+        }}
+        buttonFunc={(event) => {
+          event.preventDefault();
+          setTimer(value);
+        }}
+      />
+      <Counter interval={timer * 1000} />
     </div>
   );
 }
