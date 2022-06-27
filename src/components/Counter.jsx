@@ -7,31 +7,32 @@ const Counter = (props) => {
   };
   const [count, setCount] = useState(0);
   const [toggle, setToggle] = useState(true);
+  const [btnName, setBtnName] = useState("Остановить");
   const interval = props.interval;
 
   useEffect(() => {
-    setTimeout(() => setCount(count + 1), interval);
-  }, [count]);
+    setTimeout(() => {
+      if (toggle) {
+        setCount(count + 1);
+      } else {
+        setCount(0);
+        console.log(count);
+      }
+    }, interval);
 
-  //   const action = function () {
-  //     if (toggle) {
-  //       const counter = setInterval(() => {
-  //         setCount(count + 1);
-  //       }, interval);
-  //       console.log(count);
-  //     } else {
-  //       setCount(0);
-  //       console.log(toggle);
-  //       console.log(count);
-  //     }
-  //     return count;
-  //   };
+    if (toggle) {
+      setBtnName("Остановить");
+    } else {
+      setBtnName("Запустить");
+    }
+  }, [count, toggle]);
+
   console.log(count);
 
   return (
     <div>
       <div className="count">{count}</div>
-      <button onClick={() => setToggle(!toggle)}>Остановить/Запустить</button>
+      <button onClick={() => setToggle(!toggle)}>{btnName}</button>
     </div>
   );
 };
