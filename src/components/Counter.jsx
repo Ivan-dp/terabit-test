@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState, useEffect, useDeferredValue } from "react";
 import { PropTypes } from "prop-types";
 
 const Counter = (props) => {
@@ -19,19 +19,21 @@ const Counter = (props) => {
         console.log(count);
       }
     }, interval);
+  }, [count, toggle]);
 
+  useEffect(() => {
     if (toggle) {
       setBtnName("Остановить");
     } else {
       setBtnName("Запустить");
     }
-  }, [count, toggle]);
+  }, [toggle]);
 
   console.log(count);
 
   return (
-    <div>
-      <div className="count">{count}</div>
+    <div className="counter">
+      <h2>{count}</h2>
       <button onClick={() => setToggle(!toggle)}>{btnName}</button>
     </div>
   );

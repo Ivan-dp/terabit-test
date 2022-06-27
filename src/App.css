@@ -1,0 +1,11 @@
+.App {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.counter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
