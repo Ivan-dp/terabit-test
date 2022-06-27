@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "./App.css";
 import { Counter, Input } from "./components";
-import { interval } from "./consts";
 
 function App() {
   const [value, setValue] = useState(1);
