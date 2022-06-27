@@ -9,11 +9,10 @@ const Input = (props) => {
   };
   return (
     <>
-      <h3>Введите интервал в секундах:</h3>
       <h4>Interval: {props.value} sec</h4>
       <form>
         <input
-          type="text"
+          type="number"
           placeholder="Введите интервал"
           onChange={props.inputFunc}
         />
