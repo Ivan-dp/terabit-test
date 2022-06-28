@@ -11,7 +11,7 @@ const Counter = (props) => {
 
   useEffect(() => {
     setTimeout(() => {
-      toggle ? setCount(count + 1) : clearTimeout();
+      toggle ? setCount(count + interval) : clearTimeout();
     }, interval);
   }, [count, toggle, interval]);
 
