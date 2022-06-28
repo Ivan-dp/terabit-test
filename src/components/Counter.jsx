@@ -9,13 +9,11 @@ const Counter = (props) => {
   const [toggle, setToggle] = useState(true);
   const interval = props.interval;
 
-  function fn1() {
+  let idСount = setTimeout(() => {
     if (toggle) {
       setCount(count + 1);
     }
-  }
-
-  let idСount = setTimeout(fn1, interval);
+  }, interval);
 
   function fn2() {
     setToggle(!toggle);
