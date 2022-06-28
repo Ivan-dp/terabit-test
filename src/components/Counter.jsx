@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from "react";
+import { React, useState } from "react";
 import { PropTypes } from "prop-types";
 
 const Counter = (props) => {
@@ -9,11 +9,15 @@ const Counter = (props) => {
   const [toggle, setToggle] = useState(true);
   const interval = props.interval;
 
-  useEffect(() => {
-    setTimeout(() => {
-      toggle ? setCount(count + interval) : clearTimeout();
-    }, interval);
-  }, [count, toggle, interval]);
+  let countId = setTimeout(() => {
+    if (toggle) {
+      setCount(count + 1);
+    }
+  }, interval);
+
+  if (!toggle) {
+    clearTimeout(countId);
+  }
 
   return (
     <div className="counter">
